@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Игра в Кальмара</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel=" stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="game__header">
+    <h1 class="game__header-title">Добро пожаловать в игру "Кганбу"</h1>
+    <div class="accordion">
+      <details class="accordion__item">
+        <summary class="accordion__title">Правила игры</summary>
+        <p class="accordion__body">У каждого игрока есть 10 шариков. Оба игрока берут в руку несколько шариков, сжимают их, а затем протягивают вперед. Игрок, которому принадлежит право хода, должен угадать четное или нечетное кол-во шариков лежит в руке второго игрока. Если он угадывает, то забирает у второго игрока столько шариков, сколько держит сам. И наоборот – если не угадывает, отдает столько шариков, сколько в руке у второго. Победит тот, у кого по итогу окажется 20 шариков.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="play__text"></div>
+
+  <div class="game">
+    <div class="items">
+      <div class="item">
+        <img class="comp-img" src="img/001-sad.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="comp-bag" src="img/empty.png" alt="">
+      </div>
+      <div class="item">
+        <div class="comp__total"></div>
+      </div>
+      <div class="item">
+        <img class="player-img player-img_mob" src="img/456-sad.jpg" alt="">
+      </div>
+    </div>
+    <button class="play">Играть</button>
+
+    <div class="items player__items">
+      <div class="item">
+        <img class="player-img" src="img/456-sad.jpg" alt="">
+      </div>
+      <div class="item">
+        <img class="player-bag" src="img/empty.png" alt="">
+      </div>
+      <div class="item">
+        <div class="player-btns">
+          <div class="player__total"></div>
+          <input class="player__count" type="text" inputmode="numeric" pattern="[0-9]*" disabled>
+          <button class="player__count-btn" disabled>GO</button>
+          <div class="choises-btn">
+            <button class="choice even" disabled>Четное</button>
+            <button class="choice odd" disabled>Нечетное</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game__results" id="results"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="game.js"></script>
+</body>
+
+</html>
